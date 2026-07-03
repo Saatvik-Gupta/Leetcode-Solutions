@@ -4,7 +4,7 @@
 digits count=3
 1^3 + 5^3 + 3^3=>1+125+27==>153
 
-LEETCODE Problem Number---
+LEETCODE Problem Number---1134
 */
 
 #include<iostream>
