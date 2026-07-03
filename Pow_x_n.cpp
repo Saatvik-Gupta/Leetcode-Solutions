@@ -1,6 +1,6 @@
 // To calculate (base)^exponent using binary exponentiation x^n--->Pow(x,n)
 
-// LEETCODE Problem Number---
+// LEETCODE Problem Number---50
 
 #include<iostream>
 using namespace std;
