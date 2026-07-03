@@ -1,6 +1,6 @@
 // Palindrome numbers are those which can we read same from both the ends ex-121
-// LEETCODE---
 
+// LEETCODE Problem Number---
 #include<iostream>
 using namespace std;
 
