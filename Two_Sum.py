@@ -11,7 +11,7 @@ Through this problem, I learned:
 🔹 Time Complexity basics
 
 Time Complexity: O(n²)
-LEETCODE Problem Number---01
+LEETCODE Problem Number---1
 """
 
 class Solution(object):
