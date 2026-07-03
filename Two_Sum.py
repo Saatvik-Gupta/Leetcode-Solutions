@@ -10,7 +10,9 @@ Through this problem, I learned:
 🔹 Brute force approach
 🔹 Time Complexity basics
 
-Time Complexity: O(n²)"""
+Time Complexity: O(n²)
+LEETCODE Problem Number---01
+"""
 
 class Solution(object):
     def twoSum(self, nums, target):

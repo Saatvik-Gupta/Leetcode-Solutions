@@ -3,6 +3,7 @@
 /* Using XOR concept
 we know num ^ num =0
 num^0=num
+LEETCODE---
 */
 
 #include<iostream>
