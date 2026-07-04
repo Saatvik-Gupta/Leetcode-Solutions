@@ -27,7 +27,7 @@ int main(){
             return 0;
         }
 
-        if(nums[start]<=nums[mid) // left sorted
+        if(nums[start]<=nums[mid]) // left sorted
         {
             if(target>=nums[start] && target<=nums[mid]){
                 last=mid-1;
