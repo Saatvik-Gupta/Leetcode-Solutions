@@ -23,10 +23,11 @@ int main(){
         mid=start+ (last-start)/2;
 
         if(nums[mid]==target){
-            return mid;
+            cout<<"Element "<<target<<" Found at Index: "<<mid<<endl;
+            return 0;
         }
 
-        if(nums[start]<=target) // left sorted
+        if(nums[start]<=nums[mid) // left sorted
         {
             if(target>=nums[start] && target<=nums[mid]){
                 last=mid-1;
@@ -46,6 +47,5 @@ int main(){
 
         }
 
-        cout<<"Element "<<target<<" Found at Index: "<<mid<<endl;
     return 0;
 }
