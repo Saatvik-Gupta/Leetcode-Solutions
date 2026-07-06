@@ -11,6 +11,7 @@ LEETCODE Problem Number---704
 #include<iostream>
 using namespace std;
 #include<vector>
+ #include<algorithm>
 
 int linear_search(vector<int>nums,int target){
 
@@ -57,8 +58,13 @@ int main(){
     // int index=linear_search(nums,target);
     // cout<<"Element Found at index : "<<index<<endl;
 
-    int index=binarysearch(nums,target);
-    cout<<"Element Found at index : "<<index<<endl;
-    return 0;
+    // int index=binarysearch(nums,target);
+    // cout<<"Element Found at index : "<<index<<endl;
+    // return 0;
+
+    // simple binary search
+    //use Stl Library
+
+    cout<<"Target Found:"<< binary_search(nums.begin(),nums.end(),target); // #include<algorithm>
     
 }
