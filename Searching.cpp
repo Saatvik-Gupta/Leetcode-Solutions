@@ -25,12 +25,40 @@ int linear_search(vector<int>nums,int target){
     }
 }
 
+int binarysearch(vector<int>nums,int target){
+
+    int first=0;
+    int last=nums.size()-1;
+    int mid= first + (last-first)/2;
+
+    while (first<= last){
+        if( nums[mid] == target){
+            return  mid;
+        }
+        else if(target > nums[mid]){
+            first=mid+1;
+        }
+        else{
+            last=mid-1;
+        }
+
+        mid=first+ (last-first)/2;
+    }
+
+        return -1;
+    }
+
+
 int main(){
     int target;
     vector<int>nums={1,5,4,3,9,8,6};
     cout<<"Enter the Target:";
     cin>>target;
-    int index=linear_search(nums,target);
+    // int index=linear_search(nums,target);
+    // cout<<"Element Found at index : "<<index<<endl;
+
+    int index=binarysearch(nums,target);
     cout<<"Element Found at index : "<<index<<endl;
     return 0;
+    
 }
