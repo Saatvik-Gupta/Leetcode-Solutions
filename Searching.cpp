@@ -55,9 +55,11 @@ int main(){
     vector<int>nums={1,5,4,3,9,8,6};
     cout<<"Enter the Target:";
     cin>>target;
+    // Linear Search Algo
     // int index=linear_search(nums,target);
     // cout<<"Element Found at index : "<<index<<endl;
-
+ 
+    // Binary Search Algo
     int index=binarysearch(nums,target);
     cout<<"Element Found at index : "<<index<<endl;
     return 0;
