@@ -6,7 +6,6 @@ for index 0 in ans: 2*3*4
 for index 1 in ans: 1*3*4
 index 2 in ans: 1*2*4
 index 3 in ans: 1*2*3
-
 without using division ('/') operator
 
 LEETCODE Problem Number---238
