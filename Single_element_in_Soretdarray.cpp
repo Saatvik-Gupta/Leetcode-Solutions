@@ -1,7 +1,7 @@
 // To find unique element in sorted array
 /*
 ex: nums=[1,1,2,2,5,6,6,9,9]
-single element is 4 at index 4
+single element is 5 at index 4
 
 LEETCODE Problem Number---540
 */
