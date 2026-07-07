@@ -80,9 +80,6 @@ int single_element_M3(vector<int>arr){
 
         }
     }
-
-
-
 }
 
 int main()
