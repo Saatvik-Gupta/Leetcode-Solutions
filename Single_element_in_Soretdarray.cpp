@@ -34,8 +34,51 @@ int single_element_M2(vector<int>arr)
 }
 
 int single_element_M3(vector<int>arr){
+    int n= arr.size();
 
 // Method-3 As array sorted Binary Search, Time Complexity: O(log n)
+
+    int start=0;
+    int end=n-1;
+
+    if(n==1){ // array is of single size 
+        return arr[0];
+    }
+
+    if(arr[0]!= arr[1]){
+        return arr[0]; 
+    }
+
+    if(arr[n-1]!= arr[n-2]){
+        return arr[n-1];
+    }
+
+    while(start<=end){
+        int mid= start+ (end-start)/2;
+        if( arr[mid]!=arr[mid-1] && arr[mid]!=arr[mid+1]){
+            return arr[mid];
+        }
+        if(mid%2==0){
+            if(arr[mid]==arr[mid-1]){ // left side search as even array to the left of mid
+                end=mid-1;
+            }
+            else{
+                start=mid+1;
+            }
+        }
+
+        else{ // (mid%2!=0)
+
+            if(arr[mid]==arr[mid-1]){ //right side search as odd array to the left of mid
+                start=mid+1;
+            }
+            else{
+                end=mid-1;
+            }
+
+        }
+    }
+
 
 
 }
