@@ -21,7 +21,7 @@ I will regularly upload solutions in different programming languages along with 
 ## Languages Used
 
 * Python
-* C++
+* C/C++
 * SQL
 
 ## Goals
