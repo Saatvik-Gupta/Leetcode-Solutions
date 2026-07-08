@@ -12,61 +12,78 @@ Input: nums = [7,2,5,10,8], k = 2
 Output: 18
 Explanation: There are four ways to split nums into two subarrays.
 The best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.
+
+LEETCODE Problem Number--- 410
 */
 
-    bool isValid(vector<int>arr,int n,int m,int maxallocation){
+#include<iostream>
+using namespace std;
+#include<vector>
 
-        int painters=1;
-        int time=0;
+bool isValid(vector<int>arr,int n,int m,int maxallocation){
 
-        for(int i=0; i<n; i++){
-            if(arr[i]>maxallocation){
-                return false;
-            }
+    // n is the number of walls to paint, m is the number of painters, maxallocation here is mid
 
-            if(arr[i]+time<=maxallocation){
-                time+=arr[i];
-            }
-            else{
-                painters++;
-                time=arr[i];
-            }
+    int painters=1; // int students=1
+    int time=0; // int pages=0
+
+    for(int i=0; i<n; i++){
+        if(arr[i]>maxallocation){
+            return false;
         }
 
-        return (painters>m)?false:true;
+        if(arr[i]+time<=maxallocation){
+            time+=arr[i];
+        }
+        else{
+            painters++;
+            time=arr[i];
+        }
     }
 
-    int splitArray(vector<int>& nums, int k) {
+    return (painters>m)?false:true;
+}
 
-        int n=nums.size();
-        int start=0;
-        int sum=0;
+int splitArray(vector<int>& nums, int k) {
 
-        for(int i=0; i<n; i++){
+    int n=nums.size();
+    int start=0;
+    int sum=0;
 
-            sum+= nums[i];
-        }
+    for(int i=0; i<n; i++){
 
-        int last=sum;
-        int ans=0;
-
-        if(n<k){
-            return -1;
-        }
-
-        while(start<=last){
-            int mid= start + (last-start)/2;
-
-            if(isValid(nums,n,k,mid)){
-                ans=mid;
-                last=mid-1;
-            }
-
-            else{
-                start=mid+1;
-            }
-        }
-        
-        return ans;
+        sum+= nums[i];
     }
-};
+
+    int last=sum;
+    int ans=0;
+
+    if(n<k){
+        return -1;
+    }
+
+    while(start<=last){
+        int mid= start + (last-start)/2;
+
+        if(isValid(nums,n,k,mid)){
+            ans=mid;
+            last=mid-1;
+        }
+
+        else{
+            start=mid+1;
+        }
+    }
+    
+    return ans;
+}
+
+int main(){
+    vector<int>nums={7,2,5,10,8};
+    int k=2;
+
+    int store=splitArray(nums,k);
+    cout<<"Minimized largest sum of the split: "<<store<<endl;
+
+    return 0;
+}
