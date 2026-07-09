@@ -21,7 +21,7 @@ I will regularly upload solutions in different programming languages along with 
 ## Languages Used
 
 * Python
-* C++
+* C/C++
 * SQL
 
 ## Goals
@@ -35,7 +35,7 @@ I will regularly upload solutions in different programming languages along with 
 
 Problems are solved from LeetCode.
 
-🔗 https://leetcode.com/
+🔗 https://leetcode.com/u/Saatvik_Coder/
 
 ---
 
