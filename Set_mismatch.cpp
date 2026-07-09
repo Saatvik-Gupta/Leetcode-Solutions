@@ -21,7 +21,7 @@ int main(){
         freq[val]++;
     }
 
-    for(int i=0; i<n; i++){
+    for(int i=1; i<=n; i++){
         if(freq[i]==2)// Duplicate number
         {
             ans[0]=i;
