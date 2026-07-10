@@ -46,9 +46,10 @@ bool isSearch(vector<vector<int>> &arr, int row, int col, int target){ // O(log(
                 }
                 else end=midele-1;
             }
+            return false;
         }
 
-        else if(target>arr[low][col-1]){
+        else if(target>arr[midrow][col-1]){
             low=midrow+1;
         }
         else high=midrow-1;
@@ -66,7 +67,7 @@ int main(){
 
     int m= arr.size();
     int n=arr[0].size();
-    int target=1;
+    int target=3;
     bool store=isSearch(arr,m,n,target);
 
     if(store){
