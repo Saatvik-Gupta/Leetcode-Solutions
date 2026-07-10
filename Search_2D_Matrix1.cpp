@@ -11,6 +11,8 @@ Example 1:
 Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
 Output: true
 
+Time Complexity : O(logm+logn)==> O(log(m * n))
+
 LEETCODE Problem Number---74
 */
 
@@ -18,12 +20,12 @@ LEETCODE Problem Number---74
 using namespace std;
 #include<vector>
 
-bool isSearch(vector<vector<int>> &arr, int row, int col, int target){
+bool isSearch(vector<vector<int>> &arr, int row, int col, int target){ // O(log(m*n))
 
     int low=0;
     int high=row-1;
 
-    while(low<=high){
+    while(low<=high){ // O(log m)
         int midrow= low + (high-low)/2;
 
         if(target>= arr[midrow][0] && target<= arr[midrow][col-1]){ // row found where element exists
@@ -33,7 +35,7 @@ bool isSearch(vector<vector<int>> &arr, int row, int col, int target){
             int start=0;
             int end=col-1;
 
-            while(start<=end){
+            while(start<=end){ // O(log n)
                 int midele= start + (end-start)/2;
 
                 if(target== arr[midrow][midele]){
