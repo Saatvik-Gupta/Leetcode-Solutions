@@ -52,7 +52,7 @@ int main(){
     store=twoSum(arr,target);
 
     cout<<"Required indices for the target sum "<<target<<" are: "<<endl;
-    for( int val:arr){
+    for( int val:store){
         cout<<val<<" ";
     }
     cout<<endl;
