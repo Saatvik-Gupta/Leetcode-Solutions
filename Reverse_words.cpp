@@ -17,3 +17,54 @@ Explanation: Your reversed string should not contain leading or trailing spaces.
 LEETCODE Problem Number---151
 */
 
+#include<iostream>
+using namespace std;
+#include<string>
+#include<algorithm>
+
+void Reverse_Words(string &s){
+
+    int n=s.length();
+    // first of all reverse the string and then extract words
+    // then on words reverse them and add to ans
+
+    string ans="";
+    cout<<"Original string :"<<endl;
+
+    for(auto val: s){
+        cout<<val<<" ";
+    }
+    cout<<endl;
+
+    reverse(s.begin(),s.end());
+
+    for(int i=0; i<n;i++){
+        string word="";
+        while(i<n && s[i]!=' '){ // words extraction
+            word+=s[i];
+            i++;
+        }
+
+        reverse(word.begin(),word.end());
+
+        if(word.length()>0){
+            ans+=" "+ word;
+        }
+    }
+
+    string store=ans.substr(1);
+
+    cout<<"Reverse Words Sring: "<<endl;
+
+    for(auto val: store){
+        cout<<val<<" ";
+    }
+    cout<<endl;
+}
+
+int main(){
+
+    string s="the sky is blue";
+    Reverse_Words(s);
+    return 0;
+}
