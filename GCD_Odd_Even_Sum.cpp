@@ -16,10 +16,6 @@ Hence, GCD(sumOdd, sumEven) = GCD(16, 20) = 4.
 Example 2:
 Input: n = 5
 Output: 5
-Explanation:
-Sum of the first 5 odd numbers sumOdd = 1 + 3 + 5 + 7 + 9 = 25
-Sum of the first 5 even numbers sumEven = 2 + 4 + 6 + 8 + 10 = 30
-Hence, GCD(sumOdd, sumEven) = GCD(25, 30) = 5.
 
 LEETCODE Problem Number---3658
 */
