@@ -50,7 +50,7 @@ void search_indices(vector<int>& arr,int target){
         int mid=start+(last-start)/2;
         if(arr[mid]==target){
             ans[1]=mid;
-            start=mid+1;// search weather occured in future or not
+            start=mid+1;// search weather occured again or not
         }
 
         else if(arr[mid]<target) start=mid+1;
