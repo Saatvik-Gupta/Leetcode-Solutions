@@ -14,7 +14,7 @@ double Pow(double x,int n){
     if(n==1) return x;
     if(x==0) return 0;
 
-    if(binum<0){
+    if(binum<0){ // If power negative
         binum=-binum;
         x=1/x;
     }
