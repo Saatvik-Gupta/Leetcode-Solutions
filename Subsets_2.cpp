@@ -17,8 +17,11 @@ LEETCODE Problem Number---90
 #include<iostream>
 using namespace std;
 #include<vector>
+#include<algorithm>
 
 void Subsets(vector<int>& nums,vector<int>& ans,int idx){
+
+    sort(nums.begin(),nums.end()); // sorted for comparing duplicated placed together
 
     // Base condition
     if(idx==nums.size()){
