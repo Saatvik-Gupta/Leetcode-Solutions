@@ -21,7 +21,6 @@ using namespace std;
 
 int main(){
     vector<int>nums={1,7,3,6,5,6};
-    //"Leetcode Problem Number : 724"
     int n=nums.size();
     int left_sum=0;
     int right_sum;
