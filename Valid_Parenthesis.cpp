@@ -18,7 +18,8 @@ Example 3:
 Input: s = "(]"
 Output: false 
 
-LEETCODE Problem Number---20*/
+LEETCODE Problem Number---20
+*/
 
 #include<iostream>
 #include<stack>
